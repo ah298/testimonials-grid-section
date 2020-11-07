@@ -1,0 +1,142 @@
+
+//Primary
+$violet: hsl(263, 55%, 52%);
+$darkGrayishBlue: hsl(217, 19%, 35%);
+$darkBlackishBlue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+//Neutral
+$lightGray: hsl(0, 0%, 81%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML Element */
+
+body{
+    font-size: 14px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    background-color: $lightGrayishBlue;
+}
+
+h3{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.user-details{
+    display: flex;
+    align-items: center;
+    margin: 10px 16px;
+}
+
+/* Container wrapper */
+.box-wrapper{
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.namestatus-container{
+    margin: 0 10px;
+}
+
+.m-16{
+    margin: 16px;
+}
+
+/* Box Style*/
+#box-1{
+    //daniel
+    background-color: $violet;
+}
+
+#box-2{
+    //Jonathan
+    background-color: $darkGrayishBlue;
+}
+
+#box-3{
+    //Jeanette
+    background-color: $white;
+}
+
+#box-4{
+    //Patrick
+    background-color: $darkBlackishBlue;
+}
+
+#box-5{
+    //Kira
+    background-color: $white;
+    
+}
+
+/* Text Style */
+.dark-text{
+    color: $darkBlackishBlue;
+}
+
+.white-text{
+    color: $white;
+}
+
+.semi-transparent{
+    opacity: 50%;
+}
+
+.partial-transparent{
+    opacity: 70%;
+}
+
+/* Other styles */
+#box-1{
+    position: relative;
+    z-index: 1;
+
+    &::after{
+        content: " ";
+        background: url('../images/bg-pattern-quotation.svg') no-repeat;
+        background-size: 95%;
+        height: 130px;
+        width: 130px;
+
+        position: absolute;
+        right: 84px;
+        top: 0px;
+        z-index: -1;
+    }
+}
+
+.highlight{
+    z-index: 10;
+}
+
+/* Image Border*/
+
+.image-daniel, .image-jonathan{
+    border: 3px solid  hsla(0, 0%, 81%, 0.8);
+}
+
+.image-patrick{
+    border: 3px solid hsla(263, 55%, 52%, 0.8);
+}
+
+.image-jeanette, .image-kira{
+    border: 3px solid $white;
+}
+
+/* Footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

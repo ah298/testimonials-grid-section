@@ -1,0 +1,25 @@
+@media (min-width: 1220px){
+
+    .main-container{
+        visibility: hidden; // to prevent :hover triggering through gap
+    }
+
+    .main-container> *{
+            visibility: visible; // to bring back child after parent visibility hidden
+            transition: all 200ms ease-in-out;
+            transition-delay: 100ms;
+    }
+
+    .main-container:hover > *:not(:last-child) {
+            opacity: 0.5;
+            transform: scale(0.9);
+    }
+
+    .main-container> *:not(:last-child):hover {
+            opacity: 1;
+            transform: scale(1);
+    }
+
+
+
+}
